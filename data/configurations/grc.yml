@@ -1,0 +1,5 @@
+name: GRC
+policy:
+  damping: 0.85
+  alpha: 0.5
+train: {}

@@ -1,0 +1,7 @@
+name: NFVdeep
+
+policy:
+  policy: MlpPolicy
+
+train:
+  total_timesteps: 2000000

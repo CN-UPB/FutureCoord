@@ -1,0 +1,24 @@
+name: single (shortest path only)
+vnfs:
+  - 2   # haproxy(mem)
+  - 3   # haproxy (cpu)
+
+process:  # time measured in seconds
+  name: poissonian
+  marrival: data/rates/trace/4.npy
+  mduration: 5.0
+
+datarates:  # datarates measured in MB/s
+  distr: trcnormal
+  loc: 196.3          # roughly 1/4th of the max. rate of bottleneck service haproxy (cpu)  
+  scale: 39.25        # roughly 1/5th of the mean requested datarate
+  a: 78.5             # roughly 1/10 of the max.rate of bottleneck haproxy (cpu)
+  b: 785.3            # roughly the max. rate of bottleneck haproxy (cpu)
+
+latencies:  
+  distr:  trcnormal
+  loc: 1.0           
+  scale: 0.001            # must be embedded along the shortest path         
+  a: 1.0              
+  b: .inf             
+            

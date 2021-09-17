@@ -1,0 +1,25 @@
+name: high cpu; low datarate
+vnfs:
+  - 1   # nginx (cpu)
+  - 3   # haproxy (cpu)
+  - 5   # squid(cpu)
+
+process:  # time measured in seconds
+  name: poissonian
+  marrival: data/rates/trace/6.npy
+  mduration: 20.0
+
+datarates:  # datarates measured in MB/s
+  distr: trcnormal
+  loc: 214.0          # roughly 1/2th of the max. rate of bottleneck service squid (cpu) -> implies low datarate utilization   
+  scale: 42.8         # roughly 1/5th of the mean requested datarate
+  a: 42.8             # roughly 1/10 of the max.rate of bottlebeck squid (mem)
+  b: 427.8            # roughly the max. rate of bottleneck squid (mem)
+
+latencies:  
+  distr:  trcnormal
+  loc: 2.0           
+  scale: 1.0         
+  a: 2.0              
+  b: .inf             # max. avg. end-to-end latency is unbounded
+            

@@ -1,0 +1,10 @@
+name: MavenS
+policy:
+  C: 1.41421
+  max_searches: 500
+  greediness: -5.0
+  coefficients:
+    - 1.0
+    - 1.0
+    - 1.0
+train: {}

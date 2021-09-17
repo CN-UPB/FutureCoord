@@ -1,0 +1,17 @@
+name: germany50
+time_horizon: 43          # number of (real) timesteps, i.e. number of dynamic traffic matrices / arrival rate changes simulated per episode
+load: 1.0                 # constant scaling factor for arrival rate of services      
+datarate: 1.0             # constant scaling factor for datarate of services      
+latency: 1.0              # constant scaling factor for latency of services      
+sim_load: 1.0             # constant scaling factor for arrival rates of services from estimated traffic
+sim_datarate: 1.0         # constant scaling factor for datarate of services from estimated traffic
+sim_latency: 1.0          # constant scaling factor for latency of services from estimated traffic
+traffic: accurate         # specify whether the simulated traffic is `accurate` (known arrival rates) or traffic is generated from false pattern `erroneous`
+vnfs: ./data/experiments/vnfs.csv
+services:
+  - ./data/services/trace/memory.yml
+  - ./data/services/trace/cpu.yml
+  - ./data/services/trace/datarate.yml
+  - ./data/services/trace/latency.yml
+overlay: ./data/experiments/germany50/germany50.gpickle
+endpoints: ./data/experiments/germany50/germany50.npy

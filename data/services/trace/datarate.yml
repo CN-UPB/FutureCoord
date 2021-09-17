@@ -1,0 +1,24 @@
+name: high datarate
+vnfs:
+  - 1   # nginx(cpu)
+  - 4   # squid (mem)
+
+process:  # time measured in seconds
+  name: poissonian
+  marrival: data/rates/trace/2.npy
+  mduration: 10.0
+
+datarates:  # datarates measured in MB/s
+  distr: trcnormal
+  loc: 398.0          # roughly 1/4th of the max. rate of bottleneck service nginx (cpu)   
+  scale: 79.6         # roughly 1/5th of the mean requested datarate
+  a: 159.2             # roughly 1/10 of the max.rate of bottlebeck nginx (cpu)
+  b: 1592.0            # roughly the max. rate of bottleneck nginx (cpu)
+
+latencies:  
+  distr:  trcnormal
+  loc: 2.0           
+  scale: 1.0         
+  a: 2.0              
+  b: .inf             # max. avg. end-to-end latency is unbounded
+            
