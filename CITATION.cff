@@ -1,0 +1,28 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+- family-names: "Werner"
+  given-names: "Stefan"
+- family-names: "Schneider"
+  given-names: "Stefan"
+  orcid: "https://orcid.org/0000-0001-8210-4011"
+- family-names: "Karl"
+  given-names: "Holger"
+  orcid: "https://orcid.org/0000-0002-8343-6322"
+title: "Use What You Know: Network and Service Coordination Beyond Certainty"
+url: "https://github.com/CN-UPB/FutureCoord"
+preferred-citation:
+  type: conference-paper
+  authors:
+  - family-names: "Werner"
+    given-names: "Stefan"
+  - family-names: "Schneider"
+    given-names: "Stefan"
+    orcid: "https://orcid.org/0000-0001-8210-4011"
+  - family-names: "Karl"
+    given-names: "Holger"
+    orcid: "https://orcid.org/0000-0002-8343-6322"
+  booktitle: "IEEE/IFIP Network Operations and Management Symposium (NOMS)"
+  title: "Use What You Know: Network and Service Coordination Beyond Certainty"
+  year: 2022
+  publisher: IEEE/IFIP
