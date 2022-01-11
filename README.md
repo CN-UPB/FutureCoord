@@ -1,7 +1,23 @@
-[![Python Package using Conda](https://github.com/stwerner97/FutureCoord/actions/workflows/python-package-conda.yml/badge.svg)](https://github.com/stwerner97/FutureCoord/actions/workflows/python-package-conda.yml)
+[![CI](https://github.com/CN-UPB/FutureCoord/actions/workflows/python-package-conda.yml/badge.svg)](https://github.com/CN-UPB/FutureCoord/actions/workflows/python-package-conda.yml)
 
 # Use What You Know: Network and Service Coordination Beyond Certainty
-This repository holds the implementation of "Use What You Know: Network and Service Coordination Beyond Certainty" submitted to [IEEE/IFIP Network Operations and Management Symposium](https://noms2022.ieee-noms.org/). It combines Monte Carlo Tree Search with Traffic Forecasts for Online Orchestration of Network Services.
+
+This repository holds the implementation of FutureCoord, presented in our paper "Use What You Know: Network and Service Coordination Beyond Certainty" ([author version](https://ris.uni-paderborn.de/download/29220/29222/author_version.pdf)) accepted at [2022 IEEE/IFIP Network Operations and Management Symposium](https://noms2022.ieee-noms.org/). 
+FutureCoord combines Monte Carlo Tree Search with Traffic Forecasts for Online Orchestration of Network Services.
+
+## Citation
+
+If you use this code, please cite our paper ([author version](https://ris.uni-paderborn.de/download/29220/29222/author_version.pdf)):
+
+```
+@inproceedings{werner2022futurecoord,
+	title={Use What You Know: Network and Service Coordination Beyond Certainty},
+	author={Werner, Stefan and Schneider, Stefan and Karl, Holger},
+	booktitle={IEEE/IFIP Network Operations and Management Symposium (NOMS)},
+	year={2022},
+	publisher={IEEE/IFIP}
+}
+```
 
 ## Setup
 Assuming an Anaconda distribution has already been installed, the environment can simply be cloned via ``conda env create -f environment.yml``. We tested this setup on an Ubuntu 18.04 machine with Intel Xeon E5-2695v4@2.1GHz CPUs and 64GB RAM.
