@@ -5,6 +5,23 @@
 This repository holds the implementation of FutureCoord, presented in our paper "Use What You Know: Network and Service Coordination Beyond Certainty" ([author version](https://ris.uni-paderborn.de/download/29220/29222/author_version.pdf)) accepted at [2022 IEEE/IFIP Network Operations and Management Symposium](https://noms2022.ieee-noms.org/). 
 FutureCoord combines Monte Carlo Tree Search with Traffic Forecasts for Online Orchestration of Network Services.
 
+## Problem Setting
+
+Our paper considers a network optimization problem where an orchestrator must optimize the placement of single virtual network functions (VNFs) as part of service function chains (SFCs). An assignment is only successful if all VNFs of a SFC are assigned sufficient amounts of resources (memory, cpu, ...) and the quality of service (QoS) constraints (max. latency, ... ) are not violated. The goal of our orchestrator is then to find an allocation of resources that successfuly deploys as many SFCs as possible on the network while the incoming traffic and their requested SFCs continously change over time.
+
+<div style="text-align: center;">
+<img src="assets/setting.png" alt="setting" style="width:60%;">
+</div>
+
+## Our Proposed Solution
+
+We propose an algorithm that optimizes the discrete decision problem according to the predictions of a traffic model. Said model forecasts what SFCs will continue to be in demand and what load is to be expected. The optimization algorithm can then decide to allocate more resources to VNFs that are more in demand or will be in the future.
+
+<div style="text-align: center;">
+<img src="assets/algorithm.png" alt="algorithm" style="width:60%;">
+</div>
+
+
 ## Citation
 
 If you use this code, please cite our paper ([author version](https://ris.uni-paderborn.de/download/29220/29222/author_version.pdf)):
